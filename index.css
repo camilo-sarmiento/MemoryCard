@@ -12,7 +12,144 @@
   padding: 0;
   box-sizing: border-box;
 }
-#memoryCard{
+
+#try {
+  
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+.data {
+
+  border: 3px solid var(--main-color);
+  border-radius: 10px;
+  
+}
+.xperData {
+  width: 100%;
+  height: 70px;
+  display: flex;
+align-items: center;
+  justify-content: left;
+  margin: 20px 0 20px 8%;
+  padding: 0;
+}
+.img {
+  aspect-ratio: 1 / 1;
+  height: 90%;
+  background-image: url(video/xperHead.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  border: solid 3px var(--main-color);
+  margin-right: 10px;
+}
+.nombre > p {
+  font-family: var(--Lexend-Deca-font);
+  color: var(--blue-color);
+  font-size: 17px;
+  margin: 0;
+}
+.nombre > h1 {
+  font-family: var(--Quicksand-font);
+  color: var(--main-color);
+  font-size: 35px;
+  margin: 0;
+}
+.stats {
+  width: 300px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 0 0 8% ;
+}
+.hangMan{
+  width: 100%;
+  height: 70px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hangMan > img{
+  height: 75%;
+}
+.animation {
+  aspect-ratio: 1/.8;
+  border: 3px solid var(--main-color);
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#mistakes,
+#max_wrong {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#mistakes > p,
+#max_wrong > p,
+i {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: var(--Quicksand-font);
+  font-weight: 800;
+  font-size: 23px;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+#key_input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#errorPlace,
+#livesBar {
+  width: 100%;
+  display: flex;
+}
+.remove > div {
+  background-color: var(--main-color) !important;
+}
+.error > button,
+#livesBar > div {
+  width: 30px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  margin: 3px;
+  border: none;
+  transition: all 0.1s ease-in;
+}
+#errorCreate,
+.LivesCreate {
+  background-color: var(--orange-color) !important;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#memoryCard, #try{
   width: 100%;
   display: flex;
   justify-content: space-between;

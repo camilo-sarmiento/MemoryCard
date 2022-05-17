@@ -8,6 +8,20 @@ let cardSelected = [];
 var iconos = [];
 var card = [];
 
+function reset(){
+  console.log(correctCardPlace.childElementCount)
+  for (let i = 0; correctCardPlace.childElementCount > 0; i++) {
+    document.getElementById("cardCorrect").remove();
+    
+  } 
+
+cardSelected = [];
+iconos = [];
+card = [];
+
+  cargarIconos();
+  createCard();
+}
 cargarIconos();
 
 function cargarIconos() {
@@ -26,7 +40,7 @@ function cargarIconos() {
 function createCard() {
   for (let i = 0; i < cols; i++) {
     imgList.push(`btn ${i}.png`);
-    console.table(imgList);
+   
     card.push(`
     <div class="card-area" id="card-area${i}" onclick="cardSelect(${i})">
       <div class="card" id="card ${i}" >
@@ -87,12 +101,22 @@ function deselected(cardSelected, i) {
             <div class= "label">${iconos[0]}</div><img src="img/${imgList[0]}" alt=""></div>
         </div>
     </div>`);
+    if (i % 2 == 0){
       correctCardPlace.appendChild(document.getElementById("card-area" + i))
+      document.getElementById("card-area" + i).id = 'cardCorrect'
       document.getElementById("card-area" + (i + 1)).style.display = 'none'
-      //correctCardPlace.innerHTML = cardCorrect.join('');
+      
+    }else{
+      correctCardPlace.appendChild(document.getElementById("card-area" + i))
+      document.getElementById("card-area" + i).id = 'cardCorrect'
+      document.getElementById("card-area" + (i - 1)).style.display = 'none'
+    }
+      
     }
   }, 1000);
 }
+
+
 createCard();
 
 let selecciones = [];
