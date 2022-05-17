@@ -1,0 +1,96 @@
+:root {
+  --main-color: #118d79;
+  --orange-color: #ff5e3e;
+  --blue-color: #030f66;
+  --white-color: #ffff;
+  --text-color: #4d4d4d;
+  --Quicksand-font: "Quicksand", sans-serif;
+  --Lexend-Deca-font: "Lexend Deca", sans-serif;
+}
+
+#game {
+  
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-area{
+    
+    margin: 10px;
+}
+.card-area,
+.card,
+.face{
+  cursor: pointer;
+  aspect-ratio: 1/1.5;
+  width: 120px;
+  min-width: 100px;
+  border-radius: 10px;
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    perspective: 10000;
+  
+    -webkit-perspective: 10000;
+    transition: all .5s ease-in-out;
+}
+.face {
+  position: absolute;
+  backface-visibility: hidden;
+  
+  
+}
+.Back> img{
+  height: 100%;
+  
+}
+.border{
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+  border: solid 5px var(--main-color);
+margin: auto;
+}
+.label{
+  position: absolute;
+ vertical-align: middle;
+ font-family: var(--Lexend-Deca-font);
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  border-radius: 100%;
+  bottom: -20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+}
+.Front > img{
+width: 100%;
+}
+.Front {
+  background-color: var(--main-color);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img//BackCard.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat
+}
+.Back {
+  position: relative;
+  background-color: black;
+  color: aliceblue;
+  font-size: 50px;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
